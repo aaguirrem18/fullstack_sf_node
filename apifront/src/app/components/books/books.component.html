@@ -1,0 +1,29 @@
+<legend>Books Catalog<legend>
+<hr>
+<div class="row">
+    <div class="col-md-4" *ngFor="let book of books">
+        <!--Card-->
+        <mdb-card cascade="true" narrower="true">
+            <!--Card image-->
+            <div class="view view-cascade overlay waves-light" mdbWavesEffect>
+                <mdb-card-img *ngIf=" book.img " src="../../../assets/books/{{ book.img }}"></mdb-card-img>
+                <mdb-card-img *ngIf=" !book.img " src="../../../assets/books/default_book.jpg"></mdb-card-img>
+                <a><div class="mask rgba-white-slight"></div></a>
+            </div>
+            <!--/Card image-->
+            <mdb-card-body cascade="true" class="text-center">
+                <!--Card content-->
+                <h5 class="blue-text">
+                <mdb-icon fas icon="book"></mdb-icon> {{ book.name }} </h5>
+                <!--Title-->
+                <h4 class="card-title">{{ book.name }}{{ book.id }}</h4>
+                <!--Text-->
+                <mdb-card-text>{{ book.description }}</mdb-card-text>
+                <a mdbBtn color="unique" class="waves-light" mdbWavesEffect [routerLink]="[book.id]">More ...</a>
+            </mdb-card-body>
+            <!--/.Card content-->
+        </mdb-card>
+        <!--/.Card-->
+        <br/>
+    </div>
+</div>

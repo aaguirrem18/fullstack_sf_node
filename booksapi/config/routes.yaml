@@ -1,0 +1,69 @@
+# METHODS GENERATED WITHOUT SWAGGER API PLATFORM
+# OPTION 1
+#
+api_login_check:
+    path: /api/login_check
+
+api_logout:
+    path: /logout
+    methods: GET
+
+user:
+  path: /api/user
+  controller: App\Controller\UserController::index
+  methods: [GET]
+
+postUser:
+  path: /api/user
+  controller: App\Controller\UserController::postUser
+  methods: [POST]
+
+userProfile:
+  path: /api/user/{email}
+  controller: App\Controller\UserController::userProfile
+  methods: [GET]
+
+deleteUser:
+  path: /api/user/{email}
+  controller: App\Controller\BooksController::deleteUser
+  methods: [DELETE]
+
+patchUser:
+  path: /api/books/{email}
+  controller: App\Controller\BooksController::patchUser
+  methods: [PATCH]
+
+
+
+# METHODS COMENTED BECAUSE WAS GENERATED WITH SWAGGER API PLATFORM
+# OPTION 2
+#
+
+index:
+  path: /
+  controller: App\Controller\BooksController::index
+
+# getallBooks:
+#   path: /books
+#   controller: App\Controller\BooksController::getallBooks
+#   methods: [GET]
+
+# getBook:
+#   path: /books/{name}
+#   controller: App\Controller\BooksController::getBook
+#   methods: [GET]
+
+# postBook:
+#   path: /books
+#   controller: App\Controller\BooksController::postBook
+# methods: [POST]
+
+# deleteBook:
+#   path: /books/{name}
+#   controller: App\Controller\BooksController::deleteBook
+#   methods: [DELETE]
+
+# putBook:
+#   path: /books/{id}
+#   controller: App\Controller\BooksController::putBook
+#   methods: [PUT]

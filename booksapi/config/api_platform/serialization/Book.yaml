@@ -1,0 +1,22 @@
+App\Entity\Book:
+  attributes:
+    id:
+      groups: ['book_read']
+    name:
+      groups:
+        ['book_read','book_write']
+    description: 
+      groups: 
+        ['book_read','book_write']
+    autor:
+      groups:
+        ['book_read','book_write']
+    anno:
+      groups:
+        ['book_read','book_write']
+    categorie:
+      groups:
+        ['book_read','book_write']
+    img:
+      groups:
+        ['book_read','book_write']

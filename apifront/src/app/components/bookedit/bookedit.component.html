@@ -1,0 +1,43 @@
+<h1>Edit Book</h1>
+    <br/><br/>
+
+<h1>{{result}}</h1>
+    
+    <div class="wrapper" style="display: flex;">
+        <div class="col-md-4">
+            <img *ngIf="books.img" src="../../../assets/books/{{ books.img }}" style="max-width: 250px;">
+            <img *ngIf="!books.img" src="../../../assets/books/default_book.jpg" style="max-width: 250px;">
+        </div>
+        <div class="col-md-8">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Title</span>
+                </div>
+                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" value=" {{ books.name }}">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Description</span>
+                </div>
+                <textarea type="text" id="form7" class="md-textarea md-textarea-auto form-control" mdbInput>{{ books.description }}</textarea>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Author</span>
+                </div>
+                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" value=" {{ books.autor }}">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Year</span>
+                </div>
+                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" value=" {{ books.anno }}">
+            </div>
+            <button (click)="makePost()">Create Post</button>
+
+            <button mdbBtn type="button" color="default" rounded="true" mdbWavesEffect (click)="makePost()">Save</button>
+
+        </div>
+
+
+    </div>

@@ -1,0 +1,16 @@
+<legend>Categories</legend>
+<hr>
+<div class="row">
+
+    <mdb-card *ngFor="let categorie of categories | async" style="width: -webkit-fill-available;margin-top: 10px;">
+        <mdb-card-header>{{ categorie.name | titlecase }}</mdb-card-header>
+        <mdb-card-body>
+            <mdb-card-title><h5>{{ categorie.description | titlecase }}</h5></mdb-card-title>
+            <mdb-card-text>
+                {{ categorie.books }}
+            </mdb-card-text>
+            <a href="" mdbBtn color="primary">Books</a>
+        </mdb-card-body>
+    </mdb-card>
+
+</div>

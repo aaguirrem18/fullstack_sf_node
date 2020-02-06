@@ -1,0 +1,71 @@
+App\Entity\Book:
+  attributes:
+    normalization_context:
+      groups: ['book_read']
+    denormalization_context:
+      groups: ['book_write']
+  collectionOperations:
+    get:
+      method: 'GET'
+      #security: 'is_granted("BOOK_READ")'
+    post:
+      method: 'POST'
+      #security: 'is_granted("BOOK_POST",object)'
+      swagger_context:
+        parameters:
+          - in: body
+            name: book
+            description: the book to update
+            autor: autor
+            anno: anno
+            categories: categorie of book
+            schema:
+              type: object
+              required:
+                - name
+                - description
+                - anno
+                - autor
+                - categories
+              properties:
+                name:
+                  type: string
+                description:
+                  type: string
+                autor:
+                  type: string
+                anno:
+                  type: int
+                categories:
+                  type: string
+  itemOperations:
+    get:
+      method: 'GET'
+      #security: 'is_granted("BOOK_READ", object)'
+    put:
+      method: 'PUT'
+      #security: 'is_granted("BOOK_UPDATE",object)'
+      swagger_context:
+        parameters:
+          - in: body
+            name: book
+            description: the book to update
+            schema:
+              type: object
+              required:
+                - name
+                - description
+                - anno
+                - autor
+              properties:
+                name:
+                  type: string
+                description:
+                  type: string
+                autor:
+                  type: string
+                anno:
+                  type: int
+    delete:
+      method: 'DELETE'
+      #security: 'is_granted("BOOK_DELETE", object)'
