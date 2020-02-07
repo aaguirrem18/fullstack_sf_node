@@ -19,7 +19,7 @@ Basic sql data:<br/>
 booksapi.sql<br/>
 
 Generate LexikJWTAuthenticationBundle<br/>
-resource: https://github.com/lexik/LexikJWTAuthenticationBundle/blob/master/Resources/doc/index.md<br/><br/>
+resource: https://github.com/lexik/LexikJWTAuthenticationBundle/blob/master/Resources/doc/index.md<br/>
 
 $ mkdir -p config/jwt<br/>
 $ openssl genpkey -out config/jwt/private.pem -aes256 -algorithm rsa -pkeyopt rsa_keygen_bits:4096<br/>
@@ -34,7 +34,7 @@ lexik_jwt_authentication:<br/>
     token_ttl: 3600<br/>
 
 
-check jwt token validation:<br/>
+Check jwt token validation:<br/>
 http://localhost/{your-project-name}/booksapi/public/api/login_check
 <br/>
 
@@ -43,11 +43,25 @@ Folder Structure:
 booksapi
 - config
     - api_platform
+        - resources
+            - Book.yaml -> normalization_context / denormalization_context / available operations
+        - serialization
+            - Book.yaml ->  available operation per each sattributes 
     - jwt
+        - private.pem
+        - public.pem 
     - packages
+        - api_platform.yaml -> api platform configuration file
+        - lexik_jwt_authentication.yaml -> jwt configuration file
+        - security.yaml -> active security lebel by path, roles, access control, etc
     - routes
+        - routes.yaml -> symfony routes by yaml format -> use annotation routes
 - src
     - controller
+        - BooksController -> controller used like second option to methods ( no api-platform "/api" ) -> http://localhost/{your-project-name}/booksapi/public/books
+        - UserController -> 
+            -> controller used like second option to methods ( no api-platform "/api" ) ->  http://localhost/{your-project-name}/booksapi/public/users
+            -> used to create users -> POST ->  Content-Type: application/json -> {"email":"test@test.com", "password":"xxxxxx", "roles":"['ROLE_ADMIN']"}
     - entity
     - migration
     - repository
