@@ -59,8 +59,8 @@ booksapi
 - src
     - controller
         - BooksController -> controller used like second option to methods ( no api-platform "/api" ) -> http://localhost/{your-project-name}/booksapi/public/books
-        - UserController -> 
-            -> controller used like second option to methods ( no api-platform "/api" ) ->  http://localhost/{your-project-name}/booksapi/public/users
+        - UserController
+            -> controller used like second option to methods ( no api-platform "/api" ) ->  http://localhost/{your-project-name}/booksapi/public/users<br/>
             -> used to create users -> POST ->  Content-Type: application/json -> {"email":"test@test.com", "password":"xxxxxx", "roles":"['ROLE_ADMIN']"}
     - entity
     - migration
