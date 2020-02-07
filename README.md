@@ -76,3 +76,27 @@ npm install<br/>
 npm start<br/>
 http://localhost:4200/login<br/>
 <br/>
+
+Folder Structure:
+
+apifront
+- src
+    - app
+        - _Services
+            - auth.services.ts ->
+            - books.services.ts ->
+        - components
+            - book
+            - bookedit
+            - books
+            - categories
+            - error
+            - home
+            - login
+            - navbar
+            - user
+        - auth.ts ->
+        - post.ts ->
+- environments
+    enviroment.ts ->
+
