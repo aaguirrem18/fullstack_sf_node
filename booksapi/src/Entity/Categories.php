@@ -39,7 +39,6 @@ class Categories implements \JsonSerializable
     
     public function __construct()
     {
-        //$this->book = new ArrayCollection();
         $this->books = new ArrayCollection();
     }
 

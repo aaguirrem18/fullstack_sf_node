@@ -32,12 +32,7 @@ class UserController extends AbstractController
 
     public function index()
     {
-
         return new JsonResponse("api working !!",JsonResponse::HTTP_OK);
-
-        /*return $this->render('books/index.html.twig', [
-            'controller_name' => 'BooksController',
-        ]);*/
     }
     
     public function userProfile(string $email)

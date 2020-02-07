@@ -4,10 +4,6 @@
 api_login_check:
     path: /api/login_check
 
-api_logout:
-    path: /logout
-    methods: GET
-
 user:
   path: /api/user
   controller: App\Controller\UserController::index

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from "@angular/router";
-import { BookServices } from "../book.service";
+import { BookServices } from "../../_services/book.service";
 import { Observable } from 'rxjs';
 import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
 import { Post } from '../../post';
@@ -15,7 +15,7 @@ import { Post } from '../../post';
 })
 export class BookeditComponent implements OnInit {
 
-  readonly ROOT_URL = 'http://booksapi.test/api/books';
+  readonly BOOK_URL = 'http://localhost/fullstack_sf_node/booksapi/public/api/books';
   
   id: any;
   books: any;
@@ -55,7 +55,7 @@ export class BookeditComponent implements OnInit {
       // make it work!! 
       let params = JSON.stringify(json);
       let headers = new HttpHeaders().set('Content-Type','application/json');
-      this.result = this._http.post(this.ROOT_URL, params, {headers: headers});
+      this.result = this._http.post(this.BOOK_URL, params, {headers: headers});
       
     }
 

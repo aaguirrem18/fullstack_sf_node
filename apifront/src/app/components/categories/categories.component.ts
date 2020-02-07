@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-categories',
@@ -8,7 +9,7 @@ import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
 })
 export class CategoriesComponent implements OnInit {
 
-  readonly ROOT_URL = 'http://booksapi.test/api/categories';
+  readonly categorie_URL = environment.apiUrl+'categories';
 
   categories: any;
   /*newPost: Observable<any>;*/
@@ -23,7 +24,7 @@ export class CategoriesComponent implements OnInit {
 
 
   ngOnInit() {
-    this.categories = this.http.get(this.ROOT_URL /*+ '/posts', { params, headers }*/)    
+    this.categories = this.http.get(this.categorie_URL /*+ '/posts', { params, headers }*/)    
 
   }
 

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from "@angular/router";
-import { BookServices } from "../book.service";
+import { BookServices } from "../../_services/book.service";
 
 @Component({
   selector: 'app-books',
@@ -11,8 +11,6 @@ import { BookServices } from "../book.service";
 })
 
 export class BooksComponent implements OnInit {
-
-  readonly ROOT_URL = 'http://booksapi.test/api/books';
 
   books: any;
   error: boolean;
