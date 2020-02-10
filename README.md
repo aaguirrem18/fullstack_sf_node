@@ -23,8 +23,10 @@ That's all.<br/>
 Now, you can acess phpMyAdmin at:
 http://localhost/phpmyadmin
 
-or change your credentials in<br/>
-env. -> DATABASE_URL<br/>
+<h3>or add you own DB changing credentials in<h3>
+env. -> DATABASE_URL <br/>
+
+
 Run migration:<br/>
 php bin/console doctrine:schema:create<br/>
 php bin/console doctrine:schema:update --force<br/>
