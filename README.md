@@ -7,14 +7,14 @@ you could start use Laragon server to get a fast deploy<br/>
 
 https://laragon.org/download/
 
-clone repository in laragon/etc/www/<br/>
+clone the repository in Laragon/etc/www/{your-project-name}<br/>
 install and run:<br/>
 composer install <br/>
 
 Go to http://localhost/{your-project-name}/booksapi/public/api
 
 -----------------------
-PHPmyadmin for Laragon server<br/>
+<h3>PHPmyadmin for Laragon server</h3>
 add/update phpMyAdmin easily yourself.<br/>
 Just download from its official site (https://www.phpmyadmin.net/downloads) and extract to {LARAGON_DIR}\etc\apps\phpMyAdmin.<br/>
 That's all.<br/>
