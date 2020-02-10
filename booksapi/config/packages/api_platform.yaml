@@ -9,7 +9,7 @@ api_platform:
         versions: [3]
         api_keys:
             apiKey:
-                name: Autorization
+                name: Authorization
                 type: header
     title: 'Library API'
     description: 'API library catalogue'

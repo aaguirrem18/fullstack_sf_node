@@ -21,7 +21,6 @@ export class BookServices{
         //let headers = new Headers({'Content-Type': 'application/json'});
         //let headers = new HttpHeaders().set('Authorization', 'auth-token');
         return this._http.get(this.BOOK_URL+'/'+id_book/*, params, {headers: headers}*/).pipe(map(res => res));
-
     }
 
     getBook() {
