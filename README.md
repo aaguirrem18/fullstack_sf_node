@@ -14,6 +14,7 @@ composer install <br/>
 Go to http://localhost/{your-project-name}/booksapi/public/api
 
 -----------------------
+if you need:<br/>
 <h3>PHPmyadmin for Laragon server</h3>
 add/update phpMyAdmin easily yourself.<br/>
 Just download from its official site (https://www.phpmyadmin.net/downloads) and extract to {LARAGON_DIR}\etc\apps\phpMyAdmin.<br/>
@@ -21,14 +22,17 @@ That's all.<br/>
 
 Now, you can acess phpMyAdmin at:
 http://localhost/phpmyadmin
+
+or change your credentials in<br/>
+env. -> DATABASE_URL<br/>
 Run migration:<br/>
 php bin/console doctrine:schema:create<br/>
 php bin/console doctrine:schema:update --force<br/>
 
 Basic sql data:<br/>
-booksapi.sql<br/>
+{your-project-name}/booksapi.sql<br/>
 
-Generate LexikJWTAuthenticationBundle<br/>
+<h3>Generate Jwt Token </h3>
 resource: https://github.com/lexik/LexikJWTAuthenticationBundle/blob/master/Resources/doc/index.md<br/>
 
 $ mkdir -p config/jwt<br/>
@@ -40,15 +44,15 @@ Configure the SSH keys path in your config/packages/lexik_jwt_authentication.yam
 lexik_jwt_authentication:<br/>
     secret_key: '%kernel.project_dir%/config/jwt/private.pem' # required for token creation<br/>
     public_key: '%kernel.project_dir%/config/jwt/public.pem'  # required for token verification<br/>
-    pass_phrase: 'your_secret_passphrase' # required for token creation, usage of an environment variable is recommended<br/>
-    token_ttl: 3600<br/>
+    pass_phrase: 'your_secret_passphrase' # required for token creation, same password required in previus step <br/>
+    token_ttl: 5000000<br/>
 
 
-Check jwt token validation:<br/>
+- Check jwt token validation:<br/>
 http://localhost/{your-project-name}/booksapi/public/api/login_check
 <br/>
 
-Folder Structure:
+<h3>Folder Structure:</h3>
 
 booksapi
 - config
