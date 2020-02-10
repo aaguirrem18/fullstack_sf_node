@@ -1,16 +1,24 @@
 # fullstack_sf_node
 
 <h3>Symfony:</h3>
+
+Apache, PHP  7, Mysql<br/>
+you could start use Laragon server to get a fast deploy<br/>
+https://laragon.org/download/<br/>
+clone repository in laragon/etc/www/<br/>
+
 install and run:<br/>
 composer install <br/>
-php bin/console server start<br/>
 http://localhost/{your-project-name}/booksapi/public/api<br/>
-http://localhost/{your-project-name}/booksapi/public/api<br/>
-http://localhost/{your-project-name}/booksapi/public/api/books<br/>
-http://localhost/{your-project-name}/booksapi/public/api/categories<br/>
-
 -----------------------
 
+PHPmyadmin for Laragon server<br/>
+add/update phpMyAdmin easily yourself.<br/>
+Just download from its official site (https://www.phpmyadmin.net/downloads) and extract to {LARAGON_DIR}\etc\apps\phpMyAdmin.<br/>
+That's all.<br/>
+
+Now, you can acess phpMyAdmin at:
+http://localhost/phpmyadmin
 Run migration:<br/>
 php bin/console doctrine:schema:create<br/>
 php bin/console doctrine:schema:update --force<br/>
@@ -72,6 +80,8 @@ booksapi
 -----------------------
 
 <h3>Angular:</h3>
+yoy need https://nodejs.org/es/download/<br/>
+go to /{your-project-name}/apifront/ <br/>
 npm install<br/>
 npm start<br/>
 http://localhost:4200/login<br/>
