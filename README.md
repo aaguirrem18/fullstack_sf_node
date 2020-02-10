@@ -7,7 +7,7 @@ you could start it using Laragon server to get a fast deploy<br/>
 
 https://laragon.org/download/
 
-clone the repository in Laragon/etc/www/{your-project-name}<br/>
+clone the repository in Laragon/www/{your-project-name}<br/>
 install and run:<br/>
 composer install <br/>
 
@@ -89,7 +89,8 @@ booksapi
 
 <h3>Angular:</h3>
 yoy need https://nodejs.org/es/download/<br/>
-go to /{your-project-name}/apifront/ <br/>
+go to /www/{your-project-name}/apifront/ <br/>
+
 npm install<br/>
 npm start<br/><br/>
 http://localhost:4200/login<br/>
