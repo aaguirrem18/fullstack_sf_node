@@ -6,9 +6,8 @@ Apache, PHP  7, Mysql<br/>
 you could start use Laragon server to get a fast deploy<br/>
 https://laragon.org/download/<br/>
 clone repository in laragon/etc/www/<br/>
-
 install and run:<br/>
-composer install <br/>
+composer install <br/><br/>
 http://localhost/{your-project-name}/booksapi/public/api<br/>
 -----------------------
 
@@ -83,7 +82,7 @@ booksapi
 yoy need https://nodejs.org/es/download/<br/>
 go to /{your-project-name}/apifront/ <br/>
 npm install<br/>
-npm start<br/>
+npm start<br/><br/>
 http://localhost:4200/login<br/>
 <br/>
 
