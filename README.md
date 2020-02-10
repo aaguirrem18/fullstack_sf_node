@@ -23,7 +23,7 @@ That's all.<br/>
 Now, you can acess phpMyAdmin at:
 http://localhost/phpmyadmin
 
-<h3>or add you own DB changing credentials in<h3>
+<h3>or add you own DB changing credentials in</h3>
 env. -> DATABASE_URL <br/>
 
 
