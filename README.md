@@ -11,9 +11,9 @@ clone repository in laragon/etc/www/<br/>
 install and run:<br/>
 composer install <br/>
 
-http://localhost/{your-project-name}/booksapi/public/api<br/>
------------------------
+Go to http://localhost/{your-project-name}/booksapi/public/api
 
+-----------------------
 PHPmyadmin for Laragon server<br/>
 add/update phpMyAdmin easily yourself.<br/>
 Just download from its official site (https://www.phpmyadmin.net/downloads) and extract to {LARAGON_DIR}\etc\apps\phpMyAdmin.<br/>
