@@ -4,10 +4,13 @@
 
 Apache, PHP  7, Mysql<br/>
 you could start use Laragon server to get a fast deploy<br/>
-https://laragon.org/download/<br/>
+
+https://laragon.org/download/
+
 clone repository in laragon/etc/www/<br/>
 install and run:<br/>
-composer install <br/><br/>
+composer install <br/>
+
 http://localhost/{your-project-name}/booksapi/public/api<br/>
 -----------------------
 
