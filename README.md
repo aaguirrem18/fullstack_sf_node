@@ -3,7 +3,7 @@
 <h3>Symfony:</h3>
 
 Apache, PHP  7, Mysql<br/>
-you could start use Laragon server to get a fast deploy<br/>
+you could start it using Laragon server to get a fast deploy<br/>
 
 https://laragon.org/download/
 
